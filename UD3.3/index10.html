@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque - Multimedia</title>
+    <style>
+        /* Estilo para alinear imágenes */
+        .img-left {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .img-right {
+            float: right;
+            margin-left: 15px;
+        }
+
+        .img-center {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Role navigation añadido al encabezado para indicar navegación principal -->
+    <header role="navigation" aria-label="Encabezado principal">
+        <h1>Bienvenido al Parque</h1>
+    </header>
+
+    <!-- Imagen alineada a la izquierda -->
+    <section aria-labelledby="titulo-entrada">
+        <h2 id="titulo-entrada">Entrada al Parque</h2>
+        <img src="entrada_parque.jpg" 
+             alt="Entrada principal del parque con jardines y una fuente central" 
+             class="img-left" width="300" height="200" 
+             aria-describedby="desc-entrada">
+        <p id="desc-entrada">La entrada principal del parque da la bienvenida con hermosos jardines y una fuente central.</p>
+        <!-- La clase "img-left" alinea la imagen a la izquierda con un margen derecho para el texto. -->
+    </section>
+
+    <!-- Imagen centrada -->
+    <section aria-labelledby="titulo-zonas-verdes">
+        <h2 id="titulo-zonas-verdes">Zonas Verdes</h2>
+        <img src="zonas_verdes.jpg" 
+             alt="Vista panorámica de amplias zonas verdes del parque" 
+             class="img-center" width="500" height="300" 
+             aria-describedby="desc-zonas-verdes">
+        <p id="desc-zonas-verdes">Disfruta de amplias áreas verdes donde puedes relajarte y conectarte con la naturaleza.</p>
+        <!-- La clase "img-center" centra la imagen en la página usando display: block y margin: auto. -->
+    </section>
+
+    <!-- Imagen alineada a la derecha -->
+    <section aria-labelledby="titulo-lago">
+        <h2 id="titulo-lago">Lago del Parque</h2>
+        <img src="lago_parque.jpg" 
+             alt="Lago rodeado de árboles y un paseo en bote" 
+             class="img-right" width="300" height="200" 
+             aria-describedby="desc-lago">
+        <p id="desc-lago">El lago del parque es un lugar tranquilo ideal para paseos en bote y observar aves acuáticas.</p>
+        <!-- La clase "img-right" alinea la imagen a la derecha con un margen izquierdo para el texto. -->
+    </section>
+
+    <!-- Video introductorio del parque -->
+    <section aria-labelledby="titulo-video">
+        <h2 id="titulo-video">Video Introductorio</h2>
+        <video src="parque.mp4" controls width="640" height="360" aria-describedby="desc-video">
+            <!-- Subtítulos para mejorar la accesibilidad -->
+            <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+        <p id="desc-video">Este video muestra las principales atracciones del parque y sus actividades destacadas.</p>
+    </section>
+
+    <!-- Audio de sonidos del parque -->
+    <section aria-labelledby="titulo-audio">
+        <h2 id="titulo-audio">Sonidos del Parque</h2>
+        <audio src="sonidos_parque.mp3" controls aria-label="Reproducir sonidos relajantes del parque">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </section>
+    <footer role="contentinfo" aria-label="Pie de página">
+        <p><i>This website was created by Dave Homer.</i></p>
+    </footer>
+</body>
+</html>
